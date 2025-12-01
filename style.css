@@ -1,0 +1,180 @@
+/* ESTILOS GERAIS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333; /* Texto principal escuro */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 20px 0;
+}
+
+/* CORES PRINCIPAIS DA CLAREST CONSULTORIA */
+/* Cor principal: HEX: #1C4E80 - Azul escuro */
+:root {
+    --cor-principal: #1C4E80;
+    --cor-secundaria: #f4f4f4; /* Cinza claro para fundos */
+    --cor-texto-claro: white;
+}
+
+/* CABEÇALHO */
+header {
+    background: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    padding: 10px 0;
+    border-bottom: 5px solid #0f3a61;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ESTILO DO LOGO (IMAGEM) */
+.logo {
+    height: auto; 
+    width: 200px; 
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVEGAÇÃO AJUSTADA (Para alinhar o botão Contato) */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Garante que os itens fiquem na mesma linha */
+    align-items: center; /* CENTRALIZA VERTICALMENTE todos os itens */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s;
+    display: block; /* Para melhor área de clique nos links normais */
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* BOTÕES (Botão principal e Contato) */
+.btn-primary, .btn-contato {
+    display: inline-block;
+    background: var(--cor-texto-claro); /* Fundo branco */
+    color: var(--cor-principal) !important; /* Texto azul da Clarest */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 0; /* Alinhamento corrigido */
+    transition: background 0.3s, color 0.3s;
+    border: 2px solid var(--cor-texto-claro); 
+    font-weight: bold;
+}
+
+.btn-primary:hover, .btn-contato:hover {
+    background: var(--cor-principal); /* Fundo azul ao passar o mouse */
+    color: var(--cor-texto-claro) !important; /* Texto branco ao passar o mouse */
+    border-color: var(--cor-texto-claro);
+}
+
+/* BANNER PRINCIPAL */
+.banner {
+    /* Troque 'fundo-consultoria.jpg' por uma imagem sua, ou remova esta linha se não tiver imagem */
+    background: url('fundo-consultoria.jpg') no-repeat center center/cover; 
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    background-color: #1C4E80; /* Cor de backup */
+    position: relative;
+    z-index: 1; 
+}
+
+/* Cria uma sobreposição escura no banner para o texto aparecer melhor */
+.banner::before { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: -1; 
+}
+
+.banner h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* SEÇÃO DE SERVIÇOS */
+.servicos-section {
+    padding: 60px 0;
+    text-align: center;
+    background: var(--cor-secundaria);
+}
+
+.servico {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+    width: 45%; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box; 
+}
+
+.servico h4 {
+    color: var(--cor-principal);
+}
+
+/* RODAPÉ */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+footer .container {
+    padding: 10px 0;
+}
+
+/* ESTILO DO WHATSAPP FLUTUANTE (NOVO) */
+.whatsapp-flutuante {
+    position: fixed; /* Fixa o elemento na tela */
+    bottom: 30px; /* Distância da parte inferior */
+    right: 30px; /* Distância da lateral direita */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    background-color: #25D366; /* Cor verde oficial do WhatsApp */
+    color: white;
+    font-size: 2em; /* Tamanho grande para o ícone */
+    padding: 15px; /* Aumentei um pouco o padding para centralizar melhor */
+    border-radius: 50%; /* Torna o botão circular */
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    /* line-height: 1; <--- LINHA REMOVIDA */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.whatsapp-flutuante:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
