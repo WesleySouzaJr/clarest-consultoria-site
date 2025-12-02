@@ -16,7 +16,7 @@ body {
 
 /* PALETA DE CORES */
 :root {
-  --azul-escuro: #1C4E80;
+  --azul-escuro: #14365C; /* ajustado para combinar com fundo do logo */
   --azul-claro: #2E6FAF;
   --cinza-fundo: #f4f4f4;
   --texto-claro: #FFFFFF;
@@ -58,7 +58,8 @@ nav ul li {
 nav ul li a {
   color: var(--texto-claro);
   text-decoration: none;
-  padding: 6px 12px;
+  padding: 8px 14px;
+  font-size: 1.1em; /* fonte aumentada */
   transition: background 0.3s;
   display: block;
 }
@@ -78,6 +79,7 @@ nav ul li a:hover {
   border-radius: 6px;
   border: 2px solid var(--texto-claro);
   font-weight: bold;
+  font-size: 1.05em;
 }
 
 .btn-primary:hover, .btn-contato:hover {
@@ -160,11 +162,10 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center; /* ← centraliza verticalmente o bloco da foto */
+  align-items: center; /* centraliza verticalmente o bloco da foto */
   gap: 40px;
 }
 
-/* Texto institucional */
 .sobre-texto {
   flex: 1 1 60%;
 }
@@ -180,7 +181,6 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-/* Perfil do Wesley */
 .sobre-perfil {
   flex: 1 1 35%;
   text-align: center;
@@ -202,27 +202,6 @@ nav ul li a:hover {
   color: var(--texto-claro);
   max-width: 300px;
   margin: 0 auto;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .sobre-layout {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .sobre-texto, .sobre-perfil {
-    flex: 1 1 100%;
-  }
-
-  .sobre-texto h3 {
-    text-align: center;
-  }
-
-  .sobre-destaque {
-    font-size: 1.1em;
-  }
 }
 
 /* RODAPÉ */
@@ -268,4 +247,33 @@ footer {
 .whatsapp-flutuante::before,
 .whatsapp-flutuante::after {
   content: none !important;
+}
+
+/* RESPONSIVO — garantir WhatsApp no celular */
+@media (max-width: 768px) {
+  .sobre-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-texto, .sobre-perfil {
+    flex: 1 1 100%;
+  }
+
+  .sobre-texto h3 {
+    text-align: center;
+  }
+
+  .sobre-destaque {
+    font-size: 1.1em;
+  }
+
+  .whatsapp-flutuante {
+    display: inline-flex !important;
+  }
+
+  .btn-contato {
+    display: none;
+  }
 }
