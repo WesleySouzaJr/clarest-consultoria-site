@@ -14,18 +14,19 @@ body {
   padding: 20px 0;
 }
 
-/* CORES PRINCIPAIS */
+/* PALETA DE CORES */
 :root {
-  --cor-principal: #1C4E80; /* Azul escuro */
-  --cor-secundaria: #f4f4f4; /* Cinza claro */
-  --cor-texto-claro: #FFFFFF;
+  --azul-escuro: #1C4E80;   /* topo: cabeçalho */
+  --azul-claro: #2E6FAF;    /* centro: banner */
+  --cinza-fundo: #f4f4f4;
+  --texto-claro: #FFFFFF;
 }
 
-/* CABEÇALHO */
+/* CABEÇALHO (azul escuro) */
 header {
-  background: var(--cor-principal);
-  color: var(--cor-texto-claro);
-  padding: 10px 0;
+  background: var(--azul-escuro);
+  color: var(--texto-claro);
+  padding: 12px 0;
   border-bottom: 5px solid #0f3a61;
 }
 
@@ -35,12 +36,14 @@ header .container {
   align-items: center;
 }
 
-/* LOGO */
+/* LOGO (sem borda) */
 .logo {
+  width: 220px;
   height: auto;
-  width: 200px;
-  margin: 0;
-  padding: 0;
+  display: block;
+  border: none;
+  box-shadow: none;
+  outline: none;
 }
 
 /* NAVEGAÇÃO */
@@ -57,67 +60,69 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--cor-texto-claro);
+  color: var(--texto-claro);
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 6px 12px;
   transition: background 0.3s;
   display: block;
 }
 
 nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
 }
 
 /* BOTÕES */
 .btn-primary, .btn-contato {
   display: inline-block;
-  background: var(--cor-texto-claro);
-  color: var(--cor-principal) !important;
+  background: var(--texto-claro);
+  color: var(--azul-escuro) !important;
   padding: 10px 20px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-top: 0;
   transition: background 0.3s, color 0.3s;
-  border: 2px solid var(--cor-texto-claro);
+  border: 2px solid var(--texto-claro);
   font-weight: bold;
 }
 
 .btn-primary:hover, .btn-contato:hover {
-  background: var(--cor-principal);
-  color: var(--cor-texto-claro) !important;
-  border-color: var(--cor-texto-claro);
+  background: var(--azul-escuro);
+  color: var(--texto-claro) !important;
+  border-color: var(--texto-claro);
 }
 
-/* BANNER */
+/* BANNER (azul claro) */
 .banner {
-  background: url('fundo-consultoria.jpg') no-repeat center center/cover;
-  color: white;
+  /* Remova a imagem se quiser cor chapada de azul claro */
+  /* background: url('fundo-consultoria.jpg') no-repeat center center/cover; */
+  background-color: var(--azul-claro);
+  color: var(--texto-claro);
   text-align: center;
   padding: 100px 0;
-  background-color: #1C4E80; /* fallback */
   position: relative;
-  z-index: 1;
 }
 
+/* Remover overlay escuro para manter o banner claro */
 .banner::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: -1;
+  content: none;
 }
 
 .banner h2 {
   font-size: 2.5em;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-/* SERVIÇOS */
+.banner p {
+  font-size: 1.1em;
+  margin-bottom: 22px;
+}
+
+/* SEÇÃO DE SERVIÇOS */
 .servicos-section {
   padding: 60px 0;
   text-align: center;
-  background: var(--cor-secundaria);
+  background: var(--cinza-fundo);
 }
 
 .servico {
@@ -125,7 +130,7 @@ nav ul li a:hover {
   padding: 20px;
   margin: 10px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 6px;
   display: inline-block;
   width: 45%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -133,7 +138,7 @@ nav ul li a:hover {
 }
 
 .servico h4 {
-  color: var(--cor-principal);
+  color: var(--azul-escuro);
 }
 
 /* RODAPÉ */
@@ -145,7 +150,7 @@ footer {
   font-size: 0.9em;
 }
 
-/* WHATSAPP FLUTUANTE (sem bola verde extra) */
+/* WHATSAPP FLUTUANTE — ícone oficial */
 .whatsapp-flutuante {
   position: fixed;
   bottom: 30px;
@@ -153,6 +158,9 @@ footer {
   z-index: 1000;
   text-decoration: none;
   transition: transform 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .whatsapp-flutuante:hover {
@@ -165,7 +173,7 @@ footer {
   display: block;
 }
 
-/* Garantir que não exista fundo/borda herdados */
+/* Garantia de limpeza visual (sem sombras/fundos extras) */
 .whatsapp-flutuante,
 .whatsapp-flutuante svg {
   background: none !important;
