@@ -24,7 +24,7 @@ body {
 
 /* CABEÇALHO */
 header {
-  background: var(--azul-escuro);
+  background: #1C4E80; /* Azul Clarest oficial */
   color: var(--texto-claro);
   padding: 12px 0;
   border-bottom: 5px solid #0f3a61;
@@ -279,3 +279,4 @@ footer {
     display: none;
   }
 }
+
