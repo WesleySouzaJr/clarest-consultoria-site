@@ -139,7 +139,7 @@ nav ul li a:hover {
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   box-sizing: border-box;
-  width: calc(50% - 10px); /* 2 por linha */
+  width: calc(50% - 10px); /* 3 por linha */
 }
 
 .servico h4 {
@@ -204,3 +204,4 @@ footer {
 .whatsapp-flutuante::after {
   content: none !important;
 }
+
