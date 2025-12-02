@@ -16,7 +16,7 @@ body {
 
 /* PALETA DE CORES */
 :root {
-  --azul-escuro: #0F2C4D; /* fundo do logo */
+  --azul-escuro: #1C4E80; /* Azul Clarest oficial */
   --azul-claro: #2E6FAF;
   --cinza-fundo: #f4f4f4;
   --texto-claro: #FFFFFF;
@@ -24,7 +24,7 @@ body {
 
 /* CABEÇALHO */
 header {
-  background: #1C4E80; /* Azul Clarest oficial */
+  background: var(--azul-escuro); /* aplica o azul oficial */
   color: var(--texto-claro);
   padding: 12px 0;
   border-bottom: 5px solid #0f3a61;
@@ -279,4 +279,3 @@ footer {
     display: none;
   }
 }
-
