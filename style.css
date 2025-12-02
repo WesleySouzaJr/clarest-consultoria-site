@@ -260,3 +260,11 @@ footer {
     flex: 1 1 100%;
   }
 }
+
+.sobre-legenda {
+  font-size: 0.95em;
+  color: var(--texto-claro);
+  margin-top: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
