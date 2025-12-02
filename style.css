@@ -118,20 +118,45 @@ nav ul li a:hover {
   background: var(--cinza-fundo);
 }
 
+.servicos-section h3 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: var(--azul-escuro);
+}
+
+/* Grade de serviços com 5 caixinhas */
+.servicos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .servico {
   background: white;
   padding: 20px;
-  margin: 10px;
   border: 1px solid #ddd;
   border-radius: 6px;
-  display: inline-block;
-  width: 45%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   box-sizing: border-box;
+  width: calc(50% - 10px); /* 2 por linha */
 }
 
 .servico h4 {
   color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+.servico p {
+  font-size: 1em;
+  color: #444;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .servico {
+    width: 100%; /* 1 por linha */
+  }
 }
 
 /* RODAPÉ */
@@ -178,26 +203,4 @@ footer {
 .whatsapp-flutuante::before,
 .whatsapp-flutuante::after {
   content: none !important;
-}
-.servicos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.servico {
-  background: white;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  box-sizing: border-box;
-  width: calc(50% - 10px); /* 2 por linha */
-}
-
-@media (max-width: 768px) {
-  .servico {
-    width: 100%; /* 1 por linha no celular */
-  }
 }
