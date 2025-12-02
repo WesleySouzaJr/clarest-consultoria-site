@@ -24,8 +24,8 @@ body {
 
 /* CABEÇALHO */
 header {
-  background: var(--azul-escuro); /* aplica o azul oficial */
-  color: var(--texto-claro);
+  background: #1C4E80;
+  color: #FFFFFF;
   padding: 12px 0;
   border-bottom: 5px solid #0f3a61;
 }
@@ -279,3 +279,4 @@ footer {
     display: none;
   }
 }
+
