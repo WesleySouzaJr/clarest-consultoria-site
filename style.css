@@ -16,7 +16,7 @@ body {
 
 /* PALETA DE CORES */
 :root {
-  --azul-escuro: #14365C; /* ajustado para combinar com fundo do logo */
+  --azul-escuro: #0F2C4D; /* fundo do logo */
   --azul-claro: #2E6FAF;
   --cinza-fundo: #f4f4f4;
   --texto-claro: #FFFFFF;
@@ -59,7 +59,7 @@ nav ul li a {
   color: var(--texto-claro);
   text-decoration: none;
   padding: 8px 14px;
-  font-size: 1.1em; /* fonte aumentada */
+  font-size: 1.1em;
   transition: background 0.3s;
   display: block;
 }
@@ -162,7 +162,7 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center; /* centraliza verticalmente o bloco da foto */
+  align-items: center;
   gap: 40px;
 }
 
@@ -249,7 +249,7 @@ footer {
   content: none !important;
 }
 
-/* RESPONSIVO — garantir WhatsApp no celular */
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .sobre-layout {
     flex-direction: column;
@@ -271,6 +271,8 @@ footer {
 
   .whatsapp-flutuante {
     display: inline-flex !important;
+    bottom: 20px;
+    right: 20px;
   }
 
   .btn-contato {
