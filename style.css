@@ -179,3 +179,25 @@ footer {
 .whatsapp-flutuante::after {
   content: none !important;
 }
+.servicos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.servico {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  width: calc(50% - 10px); /* 2 por linha */
+}
+
+@media (max-width: 768px) {
+  .servico {
+    width: 100%; /* 1 por linha no celular */
+  }
+}
