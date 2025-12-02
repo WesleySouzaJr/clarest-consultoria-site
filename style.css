@@ -16,13 +16,13 @@ body {
 
 /* PALETA DE CORES */
 :root {
-  --azul-escuro: #1C4E80;   /* topo: cabeçalho */
-  --azul-claro: #2E6FAF;    /* centro: banner */
+  --azul-escuro: #1C4E80;
+  --azul-claro: #2E6FAF;
   --cinza-fundo: #f4f4f4;
   --texto-claro: #FFFFFF;
 }
 
-/* CABEÇALHO (azul escuro) */
+/* CABEÇALHO */
 header {
   background: var(--azul-escuro);
   color: var(--texto-claro);
@@ -36,7 +36,6 @@ header .container {
   align-items: center;
 }
 
-/* LOGO (sem borda) */
 .logo {
   width: 220px;
   height: auto;
@@ -92,7 +91,7 @@ nav ul li a:hover {
   border-color: var(--texto-claro);
 }
 
-/* BANNER (azul claro) */
+/* BANNER */
 .banner {
   background-color: var(--azul-claro);
   color: var(--texto-claro);
@@ -111,7 +110,7 @@ nav ul li a:hover {
   margin-bottom: 22px;
 }
 
-/* SEÇÃO DE SERVIÇOS */
+/* SERVIÇOS */
 .servicos-section {
   padding: 60px 0;
   text-align: center;
@@ -124,7 +123,6 @@ nav ul li a:hover {
   color: var(--azul-escuro);
 }
 
-/* Grade de serviços com 5 caixinhas */
 .servicos-grid {
   display: flex;
   flex-wrap: wrap;
@@ -139,7 +137,7 @@ nav ul li a:hover {
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   box-sizing: border-box;
-  width: calc(50% - 10px); /* 3 por linha */
+  width: calc(33.333% - 13.33px);
 }
 
 .servico h4 {
@@ -152,10 +150,80 @@ nav ul li a:hover {
   color: #444;
 }
 
-/* Responsivo para celular */
 @media (max-width: 768px) {
   .servico {
-    width: 100%; /* 1 por linha */
+    width: 100%;
+  }
+}
+
+/* SOBRE NÓS */
+.sobre-section {
+  padding: 60px 0;
+  background: var(--azul-claro);
+  color: var(--texto-claro);
+}
+
+.sobre-section h3 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.sobre-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.sobre-texto {
+  flex: 1 1 55%;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.sobre-texto p {
+  margin-bottom: 20px;
+}
+
+.sobre-imagem {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.sobre-imagem img {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: 0 auto;
+}
+
+.sobre-legenda {
+  font-size: 0.95em;
+  color: var(--texto-claro);
+  margin-top: 12px;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .sobre-conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-texto, .sobre-imagem {
+    flex: 1 1 100%;
+  }
+
+  .sobre-texto {
+    padding: 0 10px;
   }
 }
 
@@ -168,7 +236,7 @@ footer {
   font-size: 0.9em;
 }
 
-/* WHATSAPP FLUTUANTE — ícone oficial em PNG */
+/* WHATSAPP FLUTUANTE */
 .whatsapp-flutuante {
   position: fixed;
   bottom: 30px;
@@ -191,7 +259,6 @@ footer {
   display: block;
 }
 
-/* Garantia de limpeza visual */
 .whatsapp-flutuante,
 .whatsapp-flutuante img {
   background: none !important;
@@ -203,68 +270,4 @@ footer {
 .whatsapp-flutuante::before,
 .whatsapp-flutuante::after {
   content: none !important;
-}
-
-/* SEÇÃO SOBRE NÓS */
-.sobre-section {
-  padding: 60px 0;
-  background: var(--azul-claro);
-  color: var(--texto-claro);
-}
-
-.sobre-section h3 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 40px;
-}
-
-.sobre-conteudo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.sobre-texto {
-  flex: 1 1 55%;
-  font-size: 1.1em;
-  line-height: 1.8;
-}
-
-.sobre-texto p {
-  margin-bottom: 20px;
-}
-
-.sobre-imagem {
-  flex: 1 1 40%;
-  text-align: center;
-}
-
-.sobre-imagem img {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .sobre-conteudo {
-    flex-direction: column;
-    text-align: center;
-  }
-  .sobre-texto {
-    flex: 1 1 100%;
-  }
-  .sobre-imagem {
-    flex: 1 1 100%;
-  }
-}
-
-.sobre-legenda {
-  font-size: 0.95em;
-  color: var(--texto-claro);
-  margin-top: 12px;
-  line-height: 1.6;
-  text-align: center;
 }
