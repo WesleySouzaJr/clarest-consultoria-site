@@ -16,7 +16,7 @@ body {
 
 /* PALETA DE CORES */
 :root {
-  --azul-escuro: #1C4E80; /* Azul Clarest oficial */
+  --azul-escuro: #0F2C4D; /* fundo do logo */
   --azul-claro: #2E6FAF;
   --cinza-fundo: #f4f4f4;
   --texto-claro: #FFFFFF;
@@ -28,7 +28,6 @@ header {
   color: var(--texto-claro);
   padding: 12px 0;
   border-bottom: 5px solid #0f3a61;
-  position: relative;
 }
 
 header .container {
@@ -70,14 +69,6 @@ nav ul li a:hover {
   border-radius: 6px;
 }
 
-/* Ícone hamburguer */
-.menu-toggle {
-  display: none;
-  font-size: 2em;
-  color: var(--texto-claro);
-  cursor: pointer;
-}
-
 /* BOTÕES */
 .btn-primary, .btn-contato {
   display: inline-block;
@@ -101,4 +92,190 @@ nav ul li a:hover {
   background-color: var(--azul-claro);
   color: var(--texto-claro);
   text-align: center;
-  padding: 100
+  padding: 100px 0;
+}
+
+.banner h2 {
+  font-size: 2.5em;
+  margin-bottom: 12px;
+}
+
+.banner p {
+  font-size: 1.1em;
+  margin-bottom: 22px;
+}
+
+/* SERVIÇOS */
+.servicos-section {
+  padding: 60px 0;
+  text-align: center;
+  background: var(--cinza-fundo);
+}
+
+.servicos-section h3 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: var(--azul-escuro);
+}
+
+.servicos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.servico {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  width: calc(33.333% - 13.33px);
+}
+
+.servico h4 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+.servico p {
+  font-size: 1em;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .servico {
+    width: 100%;
+  }
+}
+
+/* SOBRE NÓS */
+.sobre-section {
+  background: var(--azul-claro);
+  color: var(--texto-claro);
+  padding: 60px 0;
+}
+
+.sobre-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.sobre-texto {
+  flex: 1 1 60%;
+}
+
+.sobre-texto h3 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+.sobre-destaque {
+  font-size: 1.2em;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.sobre-perfil {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.sobre-perfil img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 16px;
+}
+
+.perfil-legenda {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: var(--texto-claro);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* RODAPÉ */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9em;
+}
+
+/* WHATSAPP FLUTUANTE */
+.whatsapp-flutuante {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-flutuante:hover {
+  transform: scale(1.06);
+}
+
+.whatsapp-icon {
+  width: 56px;
+  height: 56px;
+  display: block;
+}
+
+.whatsapp-flutuante,
+.whatsapp-flutuante img {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.whatsapp-flutuante::before,
+.whatsapp-flutuante::after {
+  content: none !important;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .sobre-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-texto, .sobre-perfil {
+    flex: 1 1 100%;
+  }
+
+  .sobre-texto h3 {
+    text-align: center;
+  }
+
+  .sobre-destaque {
+    font-size: 1.1em;
+  }
+
+  .whatsapp-flutuante {
+    display: inline-flex !important;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .btn-contato {
+    display: none;
+  }
+}
