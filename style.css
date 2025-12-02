@@ -205,3 +205,58 @@ footer {
   content: none !important;
 }
 
+/* SEÇÃO SOBRE NÓS */
+.sobre-section {
+  padding: 60px 0;
+  background: var(--azul-claro);
+  color: var(--texto-claro);
+}
+
+.sobre-section h3 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.sobre-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.sobre-texto {
+  flex: 1 1 55%;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.sobre-texto p {
+  margin-bottom: 20px;
+}
+
+.sobre-imagem {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.sobre-imagem img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sobre-conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sobre-texto {
+    flex: 1 1 100%;
+  }
+  .sobre-imagem {
+    flex: 1 1 100%;
+  }
+}
