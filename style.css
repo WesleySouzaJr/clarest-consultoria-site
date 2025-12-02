@@ -271,3 +271,71 @@ footer {
 .whatsapp-flutuante::after {
   content: none !important;
 }
+
+/* SOBRE NÓS — layout simétrico */
+.sobre-section {
+  background: var(--azul-claro);
+  color: var(--texto-claro);
+  padding: 60px 0;
+}
+
+.sobre-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.sobre-foto {
+  flex: 1 1 280px;
+  text-align: center;
+}
+
+.sobre-foto img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border: 4px solid #fff;
+}
+
+.sobre-texto {
+  flex: 1 1 600px;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.sobre-texto h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.sobre-texto p {
+  margin-bottom: 20px;
+}
+
+.sobre-biografia {
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin-top: 30px;
+  color: var(--texto-claro);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sobre-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-texto h3 {
+    text-align: center;
+  }
+
+  .sobre-texto {
+    padding: 0 10px;
+  }
+}
