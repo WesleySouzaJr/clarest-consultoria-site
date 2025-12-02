@@ -280,6 +280,16 @@ footer {
   }
 }
 
+header {
+  background: #012E65;
+  opacity: 1; /* deve estar 100% */
+  filter: none; /* evite brilho, contraste, etc. */
+}
+
+header {
+  background: #012E65;
+  color: #FFFFFF;
+}
 
 
 
