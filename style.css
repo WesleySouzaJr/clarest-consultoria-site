@@ -204,6 +204,35 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
+/* CONTATO */
+.contato-section {
+  background: var(--cinza-fundo);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contato-section h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--azul-escuro);
+}
+
+.contato-section p {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.contato-section a {
+  color: var(--azul-escuro);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contato-section a:hover {
+  text-decoration: underline;
+}
+
 /* RODAPÉ */
 footer {
   background: #333;
@@ -279,10 +308,3 @@ footer {
     display: none;
   }
 }
-
-
-
-
-
-
-
