@@ -37,7 +37,7 @@ header .container {
 }
 
 .logo {
-  width: 220px;
+  width: 280px; /* ou 300px, se quiser mais destaque */
   height: auto;
   display: block;
 }
@@ -308,3 +308,4 @@ footer {
     display: none;
   }
 }
+
