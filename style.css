@@ -37,7 +37,7 @@ header .container {
 }
 
 .logo {
-  width: 300px; /* ou 300px, se quiser mais destaque */
+  width: 300px; /* aumenta a largura do logo */
   height: auto;
   display: block;
 }
@@ -308,5 +308,6 @@ footer {
     display: none;
   }
 }
+
 
 
